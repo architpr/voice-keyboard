@@ -24,31 +24,31 @@ This is the final part where audio file gets converted to text.
 
 🚀 Features
 
-Press-to-record audio directly in Colab (via browser microphone)
+- Press-to-record audio directly in Colab (via browser microphone)
 
-Save recording as output.wav
+- Save recording as output.wav
 
-Transcribe audio to text using Groq Whisper API
+- Transcribe audio to text using Groq Whisper API
 
-Real-time status updates (Idle → Recording → Processing → Done)
+- Real-time status updates (Idle → Recording → Processing → Done)
 
-Error handling (missing audio, missing API key, failed API request)
+- Error handling (missing audio, missing API key, failed API request)
 
-Export transcription as a .txt file for download
+- Export transcription as a .txt file for download
 
-Supports multiple languages (via Whisper language parameter)
+- Supports multiple languages (via Whisper language parameter)
 
 
 
 📋 Setup Instructions.
+ 
+- Open the notebook in Google Colab:
 
-Open the notebook in Google Colab:
+- Upload IOS_PROJECT.ipynb
 
-Upload IOS_PROJECT.ipynb
+- Run the cells step by step
 
-Run the cells step by step
-
-Install required Python libraries (only needed if you run outside Colab):
+- Install required Python libraries (only needed if you run outside Colab):
 
 [pip install requests ipywidgets]
 
@@ -59,10 +59,10 @@ Install required Python libraries (only needed if you run outside Colab):
 
 ⚠️ Known Limitations
 
-🎤 Microphone recording works in Google Colab (browser-based capture) but does not work directly in Jupyter Notebook on local PCs. For local use, a library like sounddevice or pyaudio is required.
+- 🎤 Microphone recording works in Google Colab (browser-based capture) but does not work directly in Jupyter Notebook on local PCs. For local use, a library like sounddevice or pyaudio is required.
 
-📱 The project simulates iOS keyboard functionality but does not implement UIInputViewController or direct text insertion into apps (not possible in Colab).
+- 📱 The project simulates iOS keyboard functionality but does not implement UIInputViewController or direct text insertion into apps (not possible in Colab).
 
-🌐 Requires an active internet connection since transcription is handled by Groq’s cloud API.
+- 🌐 Requires an active internet connection since transcription is handled by Groq’s cloud API.
 
-⏱️ Recording length is limited to 5 seconds by default for simplicity (can be extended).
+- ⏱️ Recording length is limited to 5 seconds by default for simplicity (can be extended).
