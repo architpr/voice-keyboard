@@ -61,15 +61,15 @@ This is the final part where audio file gets converted to text.
 
 📌 Assumptions Made
 
-The user runs the project in Google Colab (with microphone access enabled).
+ - The user runs the project in Google Colab (with microphone access enabled).
 
-A stable internet connection is available for API requests.
+ - A stable internet connection is available for API requests.
 
-The Groq Whisper API endpoint and model (whisper-large-v3) remain accessible.
+ - The Groq Whisper API endpoint and model (whisper-large-v3) remain accessible.
 
-The audio input is short (e.g., ≤ 30 seconds) and stored as output.wav.
+ - The audio input is short (e.g., ≤ 30 seconds) and stored as output.wav.
 
-Users have a valid Groq API key and basic familiarity with Python/Colab.
+ - Users have a valid Groq API key and basic familiarity with Python/Colab.
 
 
 
