@@ -59,12 +59,40 @@ This is the final part where audio file gets converted to text.
 
 
 
-⚠️ Known Limitations
+📌 Assumptions Made
 
-- 🎤 Microphone recording works in Google Colab (browser-based capture) but does not work directly in Jupyter Notebook on local PCs. For local use, a library like sounddevice or pyaudio is required.
+The user runs the project in Google Colab (with microphone access enabled).
 
-- 📱 The project simulates iOS keyboard functionality but does not implement UIInputViewController or direct text insertion into apps (not possible in Colab).
+A stable internet connection is available for API requests.
 
-- 🌐 Requires an active internet connection since transcription is handled by Groq’s cloud API.
+The Groq Whisper API endpoint and model (whisper-large-v3) remain accessible.
 
-- ⏱️ Recording length is limited to 5 seconds by default for simplicity (can be extended).
+The audio input is short (e.g., ≤ 30 seconds) and stored as output.wav.
+
+Users have a valid Groq API key and basic familiarity with Python/Colab.
+
+
+
+🔑 API Key Configuration Guide
+
+- Get your API key from the Groq Console.
+
+- In your Colab notebook, set the key as an environment variable:
+
+   import os
+   os.environ["GROQ_API_KEY"] = "your_api_key_here"
+
+
+- (Optional, safer) Store the key in Colab Secrets instead of hardcoding:
+
+   - Go to Colab → Tools → Secrets
+
+   - Add a new secret with name GROQ_API_KEY
+
+   - Access it in code:
+
+        import os
+        api_key = os.getenv("GROQ_API_KEY")
+
+
+Verify it’s working by making a simple test call to the transcription API.
