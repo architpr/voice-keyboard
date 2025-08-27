@@ -50,10 +50,12 @@ This is the final part where audio file gets converted to text.
 
 - Install required Python libraries (only needed if you run outside Colab):
 
-[pip install requests ipywidgets]
+     [pip install requests ipywidgets]
 
 
 📝 Colab already includes most dependencies, but on a local machine (Windows/Linux/Mac) you must install them manually since they are not preinstalled with Python.
+
+
 
 
 
